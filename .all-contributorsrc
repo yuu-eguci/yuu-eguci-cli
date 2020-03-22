@@ -1,5 +1,7 @@
 {
-  "files": ["README.md"],
+  "files": [
+    "README.md"
+  ],
   "imageSize": 100,
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": false,
@@ -12,6 +14,20 @@
       "link": "[<%= symbol %>](<%= url %> \"<%= description %>\"),"
     }
   },
-  "skipCi": "true",
-  "contributors": []
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "yuu-eguci",
+      "name": "Yuu Eguci",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/28250432?v=4",
+      "profile": "https://portfolio.hitoren.net/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "projectName": "yuu-eguci",
+  "projectOwner": "yuu-eguci",
+  "repoType": "github",
+  "repoHost": "https://github.com"
 }
