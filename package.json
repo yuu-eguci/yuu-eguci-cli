@@ -1,0 +1,68 @@
+{
+  "name": "@yuu-eguci/cli",
+  "version": "1.0.0",
+  "description": "About yuu-eguci",
+  "repository": "https://github.com/yuu-eguci/yuu-eguci",
+  "homepage": "https://github.com/yuu-eguci/yuu-eguci#readme",
+  "main": "lib/cli.js",
+  "bin": {
+    "yuu-eguci": "lib/cli.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/yuu-eguci/yuu-eguci/issues"
+  },
+  "author": {
+    "name": "yuu-eguci",
+    "email": "yuu.eguci@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "babel-node src/cli.js",
+    "build": "rollup -c",
+    "prepack": "npm run build",
+    "postversion": "npm pack --dry-run",
+    "fmt": "npm run lint:prettier -- --write",
+    "lint": "run-s -cnsl lint:*",
+    "lintfix": "run-s -cnsl lintfix:*",
+    "lint:prettier": "prettier --check **/*.{js,jsx,ts,tsx,json,yml,html,md,mdx,css,scss,sass}",
+    "lint:eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lintfix:eslint": "npm run lint:eslint -- --fix"
+  },
+  "dependencies": {
+    "ager": "^2.0.5",
+    "chalk": "^3.0.0",
+    "ink": "^2.7.1",
+    "ink-gradient": "^1.0.0",
+    "ink-select-input": "^3.1.2",
+    "open": "^7.0.2",
+    "react": "^16.13.0"
+  },
+  "devDependencies": {
+    "@arkweid/lefthook": "^0.7.1",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "rollup": "^2.0.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-hashbang": "^2.2.2",
+    "rollup-plugin-terser": "^5.2.0"
+  }
+}
