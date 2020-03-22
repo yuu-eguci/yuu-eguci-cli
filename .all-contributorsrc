@@ -9,6 +9,17 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "none",
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "yuu-eguci",
+      "name": "Yuu Eguci",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/28250432?v=4",
+      "profile": "https://portfolio.hitoren.net/",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    }
+  ],
   "contributorsPerLine": 7
 }
