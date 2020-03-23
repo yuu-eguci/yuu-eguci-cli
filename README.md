@@ -16,6 +16,13 @@ Install node.js, then:
 npx @yuu-eguci/cli
 ```
 
+## How to open on local
+
+```bash
+yarn install
+yarn run dev
+```
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
