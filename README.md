@@ -23,6 +23,14 @@ yarn install
 yarn run dev
 ```
 
+## Ambiguous width problem
+
+![problem](https://user-images.githubusercontent.com/28250432/96327555-8bf15880-1075-11eb-8480-7af01f9397d9.png)
+
+- Unicode東アジアA(曖昧)の文字幅をW(広)にする チェックをつけたり外したりすれば直るかもしれない。
+    - ターミナル > 環境設定 > プロファイル > 詳細 > 一番下
+    - 一応、外した状態で正常に表示されることを確認しています。
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
