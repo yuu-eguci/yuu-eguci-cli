@@ -1,10 +1,9 @@
-const ager = require("ager")
-const chalk = require("chalk")
-const { Box, Text } = require("ink")
-const Gradient = require("ink-gradient")
-const SelectInput = require("ink-select-input").default
-const open = require("open")
-const React = require("react")
+import chalk from "chalk"
+import { Box, Text } from "ink"
+import Gradient from "ink-gradient"
+import SelectInput, { Item } from "ink-select-input"
+import open from "open"
+import React from "react"
 
 const font = [
   "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░",
@@ -34,7 +33,7 @@ const linkItems = Object.entries(links).map(([key, { icon, link }]) => ({
   label: [icon, " ".repeat(2), key].join(""),
   value: link,
 }))
-const handleSelect = ({ value }) => open(value)
+const handleSelect = ({ value }: Item) => open(String(value))
 
 const profile = [
   {
@@ -106,4 +105,4 @@ const ui = () => (
   </Box>
 )
 
-module.exports = ui
+export default ui
