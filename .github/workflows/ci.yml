@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      # README の手順と同じ Yarn 1 を使います。
+      - run: npm install --global yarn@1.22.22
+      - run: yarn --version
+      # lefthook の postinstall などで Git フックや設定ファイルが作られないよう、スクリプトを実行せずにインストールします。
+      - run: yarn install --frozen-lockfile --ignore-scripts
+      - run: yarn typecheck
+      # ビルドしたうえで、成果物・画面・パッケージ内容・型チェックのテストを実行します。
+      - run: yarn test
+      - name: Show package contents
+        run: npm pack --dry-run --ignore-scripts
